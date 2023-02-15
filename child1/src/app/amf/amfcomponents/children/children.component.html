@@ -1,0 +1,22 @@
+<h1 style="color: dodgerblue;">I Am First Children</h1>
+<div class="d-flex bg-secondary">
+    <div class="p-2 me-auto bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+  
+  <div class="d-flex bg-secondary">
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 ms-auto bg-primary">Flex item 3</div>
+  </div>
+
+<h4>Basic mat-select</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Favorite food</mat-label>
+  <mat-select (selectionChange)="onConfigChange($event)">
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
